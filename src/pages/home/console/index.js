@@ -18,7 +18,7 @@ import TelephoneConsole from '../../../components/telephone/telephoneConsole'
 import ShowCode from '../../../showCode/showCode'
 import { useState } from 'react'
 
-import { Divider,Button  } from 'antd'
+import { Button  } from 'antd'
 function Console() {
   let [showCode,setShowCode] = useState(false)
   const id = useSelector((state) => state.home.domId)

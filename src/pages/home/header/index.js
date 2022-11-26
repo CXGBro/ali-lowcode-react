@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Row, Image, Button, Popover } from 'antd';
+import { Card } from 'antd';
 import { LeftOutlined } from '@ant-design/icons';
 import Display from './compontents/display'
 import ContentSizeEdit from './compontents/ContentSizeEdit'

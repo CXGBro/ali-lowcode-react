@@ -1,13 +1,8 @@
-
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { changeId } from '../../pages/home/slice'
 import {
   Form,
-  Select,
-  Input,
-  Radio,
-  Checkbox
 } from 'antd'
 import './index.css'
 function App(data) {
