@@ -17,6 +17,7 @@ const App = () => {
   };
   return (
     <div className="Index">
+      
       <Card title="登录" bordered={false} style={{ width: 300, borderRadius: '10px' }}>
         <Form
           name="basic"
@@ -32,7 +33,7 @@ const App = () => {
             name="phone"
             rules={[{ required: true, message: '请输入手机号!' }, { min: 11, max: 11, message: '电话号码位数不正确!' }]}
           >
-            <Input placeholder='输入手机号' value="11111111111"/>
+            <Input placeholder='随机输入十一位数字即可'/>
           </Form.Item>
 
           <Form.Item
@@ -40,7 +41,7 @@ const App = () => {
             name="password"
             rules={[{ required: true, message: '请输入密码!' }, { min: 6, max: 12, message: '输入不少于6位密码!' }]}
           >
-            <Input.Password placeholder='输入密码' value="11111111111"/>
+            <Input.Password placeholder='随机输入不少于六位数字即可'/>
           </Form.Item>
 
           <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
@@ -51,7 +52,7 @@ const App = () => {
             <Button type="primary" htmlType="submit" shape='round' style={{ padding: '0 30px' }}>
               登录&注册
             </Button>
-            <p style={{ marginTop: '10px', fontSize: '12px', color: '#777' }}>没有账号金会为您自动注册</p>
+            <p style={{ marginTop: '10px', fontSize: '12px', color: '#777' }}>没有账号会为您自动注册</p>
           </Form.Item>
         </Form>
       </Card>
