@@ -73,6 +73,7 @@ function Compontent(domList, domId) {
       // const targetId = e.target.id
       const idData = findOption(id)
       const targetData = findOption(e.target.id)
+      console.log("e.target",e.target)
       const { index: idIndex, option: idOption } = idData
       const { index: targetIndex, option: targetOption } = targetData
 
@@ -136,7 +137,7 @@ function Content() {
     })
   }
 
-  //结束拖拽
+  // 结束拖拽
   const drop = (e) => {
 
     // 获取数据
@@ -145,12 +146,12 @@ function Content() {
     // 存在组件配置项，表示是插入新节点
     if (option) {
       const { target } = e
-      option = JSON.parse(option)//转化为对象配置
+      option = JSON.parse(option)// 转化为对象配置
 
       // 存在id，表示该节点为组件节点，需要判定插入位置
       if (!target.id) increment(option)
 
-      //根据索引值插入
+      // 根据索引值插入
       const index = _index(target.id)
       dispatch(index === -1 ? increment(option) : incrementByIndex({ index, option }))
     }

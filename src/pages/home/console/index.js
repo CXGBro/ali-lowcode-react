@@ -15,21 +15,17 @@ import TextConsole from '../../../components/text/textConsole'
 import DateConsole from '../../../components/datePicker/datePickerConsole'
 import LinkConsole from '../../../components/link/linkConsole'
 import TelephoneConsole from '../../../components/telephone/telephoneConsole'
-import ShowCode from '../../../showCode/showCode'
-import { useState } from 'react'
 
-import { Button  } from 'antd'
 function Console() {
-  let [showCode,setShowCode] = useState(false)
   const id = useSelector((state) => state.home.domId)
   const options = useSelector((state) => state.home.domOptions)
   const type = useSelector((state) => state.home.domType)
   let control = (
     <>
-     {id === options.id && type === 'Card' && <CardConsole options={options} />}
+      {id === options.id && type === 'Card' && <CardConsole options={options} />}
       {id === options.id && type === 'Rate' && <RateConsole options={options} />}
-      {id === options.id && type === 'Text' && <TextConsole options={options} />} 
-      {id === options.id && type === 'Link' && <LinkConsole options={options} />} 
+      {id === options.id && type === 'Text' && <TextConsole options={options} />}
+      {id === options.id && type === 'Link' && <LinkConsole options={options} />}
       {id === options.id && type === 'Date' && <DateConsole options={options} />}
       {id === options.id && type === 'Radio' && <RadioConsole options={options} />}
       {id === options.id && type === 'Email' && <EmailConsole options={options} />}
@@ -43,16 +39,11 @@ function Console() {
       {id === options.id && type === 'Telephone' && <TelephoneConsole options={options} />}
     </>
   )
-  let Showcode = (
-    <ShowCode/>
-  )
   return (
     <div className="Console">
-      
-        <div className='haha'><Button onClick={() => {(setShowCode(showCode = true))}} shape='round'>控制台</Button>
-        <Button  onClick={() => {(setShowCode(showCode = false))}} shape='round'>生成代码</Button></div>
-      <div>
-        {showCode == true ? control : Showcode}
+      <h3>控制台</h3>
+      <div className='haha'>
+        {control}
       </div>
     </div>
   );
